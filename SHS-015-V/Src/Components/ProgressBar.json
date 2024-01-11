@@ -1,0 +1,36 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "ProgressBar",
+    "TemplateGuid": "08a193da7ba740abbf80cffd39606437"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Data",
+      "Hidden": false,
+      "Name": "Data",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Data",
+      "Type": "{\"Version\":\"1.336\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Id\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Level\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Reponser\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"iconCheck\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638405791142051189",
+  "Name": "08a193da7ba740abbf80cffd39606437",
+  "OverridableProperties": {},
+  "Version": "1.0"
+}

@@ -114,13 +114,13 @@
     "Id": "bf69a3ad-61bb-46dc-bfce-58a4cfef81c1",
     "InstrumentationKey": "",
     "ManualOfflineProfileId": "",
-    "Name": "SHS-015-V ",
+    "Name": "SHS-015-V",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "SHS-015-V ",
+    "AppName": "SHS-015-V",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
