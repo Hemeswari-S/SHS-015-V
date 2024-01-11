@@ -900,8 +900,9 @@
                 ZIndex: =4
 
     Container16 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =452
+        Height: =570
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -909,7 +910,7 @@
         Visible: =If(Gallery_study_1.AllItemsCount=0,true,false)
         Width: =App.Width-UploadResultComp.VarMenuWidth
         X: =UploadResultComp.VarMenuWidth
-        Y: =316
+        Y: =198
         ZIndex: =4
 
         Image5 As image:
