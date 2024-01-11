@@ -1047,7 +1047,7 @@ Study As screen:
 
     notfound_study As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =537
+        Height: =567
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -1055,7 +1055,7 @@ Study As screen:
         Visible: =If(Gallery_study.AllItemsCount=0,true,false)
         Width: =App.Width-compStudy.VarMenuWidth
         X: =compStudy.VarMenuWidth
-        Y: =231
+        Y: =201
         ZIndex: =5
 
         Image8_6 As image:
