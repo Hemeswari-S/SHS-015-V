@@ -1,5 +1,6 @@
 App As appinfo:
     BackEnabled: =true
+    OnStart: =ClearCollect(AttachemntsofInitiative,LookUp('Initiative List',ID=73,Attachments))
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
