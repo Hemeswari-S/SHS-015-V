@@ -737,6 +737,10 @@ Study As screen:
 
                         DataCardValue65 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            ChevronBackground: =Color.White
+                            ChevronFill: =Color.Black
+                            ChevronHoverBackground: =Color.White
+                            ChevronHoverFill: =Color.Black
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
@@ -806,6 +810,10 @@ Study As screen:
 
                         DataCardValue66 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            ChevronBackground: =Color.White
+                            ChevronFill: =Color.Black
+                            ChevronHoverBackground: =Color.White
+                            ChevronHoverFill: =Color.Black
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
@@ -875,6 +883,10 @@ Study As screen:
 
                         DataCardValue71 As combobox:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            ChevronBackground: =Color.White
+                            ChevronFill: =Color.Black
+                            ChevronHoverBackground: =Color.White
+                            ChevronHoverFill: =Color.Black
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
@@ -1317,6 +1329,7 @@ Study As screen:
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =2
                             HoverFill: =RGBA(255, 255, 255, 1)
                             Items: =Choices([@'Study(Administration)'].Quarter)
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -1393,6 +1406,7 @@ Study As screen:
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =2
                             Items: =Choices([@'Study(Administration)'].Direction)
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
@@ -1467,6 +1481,7 @@ Study As screen:
                             DefaultSelectedItems: =Parent.Default
                             DisplayFields: =["Value"]
                             DisplayMode: =Parent.DisplayMode
+                            FocusedBorderThickness: =2
                             Items: =Choices([@'Study(Administration)'].'Perfomance Year')
                             PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                             SearchFields: =["Value"]
