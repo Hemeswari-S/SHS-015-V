@@ -63,6 +63,7 @@
                     ZIndex: =1
 
                 Label18 As label:
+                    Font: =Font.Georgia
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
                     Size: =16
@@ -269,6 +270,7 @@
                     ZIndex: =1
 
                 Label18_1 As label:
+                    Font: =Font.Georgia
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
                     Size: =16
