@@ -520,7 +520,9 @@
         Height: =App.Height-'compForApproval(A1)'.ComHeaderHeight
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Visible: =ShowActionpage
+        Visible: |-
+            =//ShowActionpage
+            true
         Width: =App.Width-'compForApproval(A1)'.VarMenuWidth
         X: ='compForApproval(A1)'.VarMenuWidth
         Y: ='compForApproval(A1)'.ComHeaderHeight
@@ -570,13 +572,13 @@
                     ZIndex: =1
 
                     Icon27_2 As icon.Reload:
-                        Color: =RGBA(45, 128, 40, 1)
-                        Height: =32
+                        Color: =RGBA(3, 45, 255, 1)
+                        Height: =30
                         Icon: =Icon.Reload
                         OnSelect: =Refresh('Divisions With Study')
-                        Width: =36
-                        X: =270
-                        Y: =21
+                        Width: =30
+                        X: =310
+                        Y: =27
                         ZIndex: =1
 
                 Container25_63 As groupContainer.manualLayoutContainer:
@@ -796,6 +798,11 @@
                 Checkbox2_6 As checkbox:
                     FillPortions: =1
                     LayoutMinWidth: =50
+                    OnCheck: |-
+                        =ForAll(
+                            Filter(Gallery_study_5.AllItems,Checkbox2_6.Value=true),
+                            Collect(ValueofId,ThisRecord.ID)
+                        );
                     Text: =""
                     ZIndex: =1
 
@@ -1015,6 +1022,7 @@
                     Checkbox2_7 As checkbox:
                         Default: =Checkbox2_6.Value
                         LayoutMinWidth: =50
+                        Reset: =Resetcheckbox
                         Text: =""
                         Width: =50
                         ZIndex: =1
@@ -1974,7 +1982,8 @@
 
             Button6_3 As button:
                 OnSelect: |
-                    =Clear(ValueofId);
+                    =UpdateContext({Resetcheckbox: false});
+                    Clear(ValueofId);
                     ForAll(
                         Filter(
                             Gallery_study_5.AllItems,
@@ -1996,6 +2005,9 @@
                         "The initiative is approved successfully",
                         NotificationType.Success
                     );
+                    Clear(ValueofId);
+                    UpdateContext({Resetcheckbox: true});
+                    Reset(Checkbox2_6)
                 Text: ="Confirm"
                 Width: =142
                 X: =624
@@ -2034,7 +2046,7 @@
             DisplayMode: =If(TextInput3_4.Text="",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =57
             OnSelect: |
-                =Clear(ValueofId);
+                =UpdateContext({Resetcheckbox: false});
                 ForAll(
                     Filter(
                         Gallery_study_5.AllItems,
@@ -2056,6 +2068,11 @@
                     "The study is Rejected successfully",
                     NotificationType.Success
                 );
+                Clear(ValueofId);
+                UpdateContext({Resetcheckbox: true});
+                Reset(Checkbox2_7);
+                
+                UpdateContext({rejectpopup: false});
             Text: ="Confirm"
             Width: =210
             X: =832

@@ -98,7 +98,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 36,
+    "BindingErrorCount": 18,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -154,7 +154,6 @@
     "All Initiatives(C)",
     "For Champion Action(C)",
     "Approved Initiatives(C)",
-    "Dashboard(Approver1)",
     "For Approval(Approver1)",
     "For Approval(Approver2)",
     "For Approval 3",

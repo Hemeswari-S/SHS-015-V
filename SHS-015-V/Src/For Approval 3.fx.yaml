@@ -514,7 +514,9 @@
         Height: =App.Height-'compForApproval(A1)'.ComHeaderHeight
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Visible: =ShowActionpage
+        Visible: |-
+            =//ShowActionpage
+            true
         Width: =App.Width-'compForApproval(A3)'.VarMenuWidth
         X: ='compForApproval(A3)'.VarMenuWidth
         Y: ='compForApproval(A1)'.ComHeaderHeight
