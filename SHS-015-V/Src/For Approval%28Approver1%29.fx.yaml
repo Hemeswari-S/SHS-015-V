@@ -2082,3 +2082,173 @@
             Y: =175
             ZIndex: =6
 
+    "'For Evidence Initiative_2' As groupContainer.manualLayoutContainer":
+        Fill: =RGBA(40, 134, 222, 0.15)
+        Height: =App.Height-compForAdminAction.ComHeaderHeight
+        Visible: =EvidenceinitativePopup
+        Width: =App.Width-compForAdminAction.VarMenuWidth
+        X: ='compForApproval(A1)'.VarMenuWidth
+        Y: ='compForApproval(A1)'.ComHeaderHeight
+        ZIndex: =8
+
+        "'Send for Approval_popup_10' As groupContainer.manualLayoutContainer":
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =571
+            Width: =Parent.Width-100
+            X: =55
+            Y: =45
+            ZIndex: =1
+
+            EvidenceformForadminAction_4 As form:
+                DataSource: ='Initiative List'
+                Height: =488
+                Item: =Gallery_study_4.Selected
+                NumberOfColumns: =1
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Attachments_DataCard2_2 As typedDataCard.attachmentsEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Attachments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Initiative List'],DataSourceInfo.DisplayName,"{Attachments}")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =Parent.Height
+                    Required: =false
+                    Update: =DataCardValue113_2.Attachments
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey112_2 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: ="Attach Evidence Here"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =15
+                        ZIndex: =1
+
+                    DataCardValue113_2 As attachments:
+                        AddAttachmentText: ="Drag & Drop File Or Click Here To Attach Evidence"
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DisplayMode: =Parent.DisplayMode
+                        FontWeight: =FontWeight.Bold
+                        Height: =414
+                        IsInDataCard: =true
+                        Items: =Parent.Default
+                        NoAttachmentsText: =" "
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey112_2.Y + DataCardKey112_2.Height + 5
+                        ZIndex: =2
+
+            Button3_8 As button:
+                OnSelect: =SubmitForm(EvidenceformForadminAction_4);
+                Text: ="Upload"
+                X: =918
+                Y: =500
+                ZIndex: =2
+
+            Button3_9 As button:
+                OnSelect: |-
+                    =UpdateContext({EvidenceinitativePopup:false})
+                Text: ="Cancel"
+                X: =1106
+                Y: =500
+                ZIndex: =3
+
+    "'For Evidence for Study_2' As groupContainer.manualLayoutContainer":
+        Fill: =RGBA(40, 134, 222, 0.15)
+        Height: =App.Height-compForAdminAction.ComHeaderHeight
+        Visible: =EvidenceStudyPopup
+        Width: =App.Width-compForAdminAction.VarMenuWidth
+        X: ='compForApproval(A1)'.VarMenuWidth
+        Y: ='compForApproval(A1)'.ComHeaderHeight
+        ZIndex: =9
+
+        "'Send for Approval_popup_11' As groupContainer.manualLayoutContainer":
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =571
+            Width: =Parent.Width-100
+            X: =55
+            Y: =45
+            ZIndex: =1
+
+            EvidenceformForadminAction_5 As form:
+                DataSource: ='Divisions With Study'
+                Height: =488
+                Item: =Gallery_study_7.Selected
+                NumberOfColumns: =1
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Attachments_DataCard3_2 As typedDataCard.attachmentsEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Attachments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Divisions With Study'],DataSourceInfo.DisplayName,"{Attachments}")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =485
+                    Required: =false
+                    Update: =DataCardValue121_2.Attachments
+                    Width: =1266
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey120_2 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: ="Attach Evidence Here"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue121_2 As attachments:
+                        AddAttachmentText: ="Drag & drop Or Click Here to Attach the Evidence"
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DisplayMode: =Parent.DisplayMode
+                        FontWeight: =FontWeight.Bold
+                        Height: =423
+                        IsInDataCard: =true
+                        Items: =Parent.Default
+                        NoAttachmentsText: =" "
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey120_2.Y + DataCardKey120_2.Height + 5
+                        ZIndex: =2
+
+            Button3_10 As button:
+                OnSelect: =SubmitForm(EvidenceformForadminAction_5);
+                Text: ="Upload"
+                X: =918
+                Y: =500
+                ZIndex: =2
+
+            Button3_11 As button:
+                OnSelect: |-
+                    =UpdateContext({EvidenceStudyPopup:false})
+                Text: ="Cancel"
+                X: =1106
+                Y: =500
+                ZIndex: =3
+
