@@ -520,7 +520,9 @@
         Height: =App.Height-'compForApproval(A1)'.ComHeaderHeight
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Visible: =ShowActionpage
+        Visible: |-
+            =//ShowActionpage
+            true
         Width: =App.Width-'compForApproval(A2)'.VarMenuWidth
         X: ='compForApproval(A2)'.VarMenuWidth
         Y: ='compForApproval(A1)'.ComHeaderHeight
@@ -796,6 +798,11 @@
                 Checkbox2_8 As checkbox:
                     FillPortions: =1
                     LayoutMinWidth: =50
+                    OnCheck: |
+                        =ForAll(
+                            Filter(Gallery_study_4.AllItems,Checkbox2_3.Value=true),
+                            Collect(ValueofId,ThisRecord.ID)
+                        );
                     Text: =""
                     ZIndex: =1
 
@@ -1020,6 +1027,7 @@
                     Checkbox2_9 As checkbox:
                         Default: =Checkbox2_8.Value
                         LayoutMinWidth: =50
+                        Reset: =Resetcheckbox
                         Text: =""
                         Width: =50
                         ZIndex: =1
@@ -1979,7 +1987,7 @@
 
             Button6_5 As button:
                 OnSelect: |
-                    =Clear(ValueofId);
+                    =UpdateContext({Resetcheckbox: false});
                     ForAll(
                         Filter(
                             Gallery_study_10.AllItems,
@@ -2001,6 +2009,9 @@
                         "The study is send for Approval Process successfully",
                         NotificationType.Success
                     );
+                    Clear(ValueofId);
+                    UpdateContext({Resetcheckbox: true});
+                    Reset(Checkbox2_8)
                 Text: ="Confirm"
                 Width: =142
                 X: =624
@@ -2039,7 +2050,7 @@
             DisplayMode: =If(TextInput3_5.Text="",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =57
             OnSelect: |
-                =Clear(ValueofId);
+                =Clear(ValueofId);UpdateContext({Resetcheckbox: false});
                 ForAll(
                     Filter(
                         Gallery_study_10.AllItems,
@@ -2061,6 +2072,12 @@
                     "The study is send for Approval Process successfully",
                     NotificationType.Success
                 );
+                
+                Clear(ValueofId);
+                UpdateContext({Resetcheckbox: true});
+                Reset(Checkbox2_8);
+                
+                UpdateContext({rejectpopup: false});
             Text: ="Confirm"
             Width: =210
             X: =832
