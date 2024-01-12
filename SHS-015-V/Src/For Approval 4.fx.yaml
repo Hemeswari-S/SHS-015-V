@@ -12,12 +12,6 @@
         Y: ='compForApproval(A1)'.ComHeaderHeight
         ZIndex: =6
 
-        Arrow2_15 As arrow.backArrow:
-            Height: =30
-            OnSelect: =Navigate(Administration)
-            Width: =30
-            ZIndex: =1
-
         "'Button&heading_18' As groupContainer.verticalAutoLayoutContainer":
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.None
