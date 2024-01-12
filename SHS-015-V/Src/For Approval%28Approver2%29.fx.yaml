@@ -798,10 +798,16 @@
                 Checkbox2_8 As checkbox:
                     FillPortions: =1
                     LayoutMinWidth: =50
-                    OnCheck: |
+                    OnCheck: |-
                         =ForAll(
-                            Filter(Gallery_study_4.AllItems,Checkbox2_3.Value=true),
-                            Collect(ValueofId,ThisRecord.ID)
+                            Filter(
+                                Gallery_study_10.AllItems,
+                                Checkbox2_9.Value = true
+                            ),
+                            Collect(
+                                ValueofId,
+                                ThisRecord.ID
+                            )
                         );
                     Text: =""
                     ZIndex: =1
@@ -1027,6 +1033,7 @@
                     Checkbox2_9 As checkbox:
                         Default: =Checkbox2_8.Value
                         LayoutMinWidth: =50
+                        OnCheck: =Collect(ValueofId,ThisItem.ID)
                         Reset: =Resetcheckbox
                         Text: =""
                         Width: =50
@@ -1988,16 +1995,7 @@
             Button6_5 As button:
                 OnSelect: |
                     =UpdateContext({Resetcheckbox: false});
-                    ForAll(
-                        Filter(
-                            Gallery_study_10.AllItems,
-                            Checkbox2_9.Value = true
-                        ),
-                        Collect(
-                            ValueofId,
-                            ThisRecord.ID
-                        )
-                    );
+                    
                     ResponceFlow.Run(
                         "approver2",
                         "Approved",
@@ -2050,17 +2048,8 @@
             DisplayMode: =If(TextInput3_5.Text="",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =57
             OnSelect: |
-                =Clear(ValueofId);UpdateContext({Resetcheckbox: false});
-                ForAll(
-                    Filter(
-                        Gallery_study_10.AllItems,
-                        Checkbox2_9.Value = true
-                    ),
-                    Collect(
-                        ValueofId,
-                        ThisRecord.ID
-                    )
-                );
+                =UpdateContext({Resetcheckbox: false});
+                
                 ResponceFlow.Run(
                     "approver2",
                     "Rejected",

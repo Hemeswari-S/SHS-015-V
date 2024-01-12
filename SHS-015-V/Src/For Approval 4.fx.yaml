@@ -793,10 +793,16 @@
                 Checkbox2_14 As checkbox:
                     FillPortions: =1
                     LayoutMinWidth: =50
-                    OnCheck: |
+                    OnCheck: |-
                         =ForAll(
-                            Filter(Gallery_study_4.AllItems,Checkbox2_14.Value=true),
-                            Collect(ValueofId,ThisRecord.ID)
+                            Filter(
+                                Gallery_study_16.AllItems,
+                                Checkbox2_15.Value = true
+                            ),
+                            Collect(
+                                ValueofId,
+                                ThisRecord.ID
+                            )
                         );
                     Text: =""
                     ZIndex: =1
@@ -1017,6 +1023,7 @@
                     Checkbox2_15 As checkbox:
                         Default: =Checkbox2_14.Value
                         LayoutMinWidth: =50
+                        OnCheck: =Collect(ValueofId,ThisItem.ID)
                         Reset: =Resetcheckbox
                         Text: =""
                         Width: =50
@@ -1979,16 +1986,7 @@
                 OnSelect: |+
                     =UpdateContext({Resetcheckbox: false});
                     
-                    ForAll(
-                        Filter(
-                            Gallery_study_16.AllItems,
-                            Checkbox2_15.Value = true
-                        ),
-                        Collect(
-                            ValueofId,
-                            ThisRecord.ID
-                        )
-                    );
+                    
                     ResponceFlow.Run(
                         "approver4",
                         "Approved",
@@ -2043,16 +2041,6 @@
             Height: =57
             OnSelect: |
                 =UpdateContext({Resetcheckbox: false});
-                ForAll(
-                    Filter(
-                        Gallery_study_16.AllItems,
-                        Checkbox2_15.Value = true
-                    ),
-                    Collect(
-                        ValueofId,
-                        ThisRecord.ID
-                    )
-                );
                 ResponceFlow.Run(
                     "approver4",
                     "Rejected",
