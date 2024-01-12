@@ -521,7 +521,7 @@
 
             Gallery_study_17 As gallery.galleryVertical:
                 DelayItemLoading: =true
-                Items: =Filter('Initiative List',Progress="Approved")
+                Items: =Filter('Initiative List',PerfYear=VarCurrentYear.Value,Progress="Approved")
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
