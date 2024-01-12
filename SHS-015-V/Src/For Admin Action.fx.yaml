@@ -499,9 +499,8 @@
         Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Visible: |-
-            =//ShowActionpage
-            true
+        Visible: |
+            =true
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
@@ -1202,14 +1201,44 @@
                                 =UpdateContext({DisplayInitiative:true});
                             ZIndex: =3
 
-        Container62 As groupContainer.verticalAutoLayoutContainer:
+        Container62_1 As groupContainer.verticalAutoLayoutContainer:
             FillPortions: =0
             Height: =50
-            LayoutDirection: =LayoutDirection.Vertical
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            ZIndex: =6
+            ZIndex: =7
+
+            ButtonCanvas2_2 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =UpdateContext({EvidenceStudyPopup:true})
+                Text: ="For Evidance"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas2_3 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="ForGraph"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =2
 
     DisplayInitiative_1 As groupContainer.verticalAutoLayoutContainer:
         Fill: =Color.Beige
@@ -1327,15 +1356,16 @@
             DataSource: ='Initiative List'
             DefaultMode: =FormMode.View
             FillPortions: =0
+            Height: =230
             Item: =Gallery_study_3.Selected
             LayoutMinHeight: =250
             LayoutMinWidth: =400
-            NumberOfColumns: =1
+            NumberOfColumns: =6
             OnFailure: =
             OnSuccess: |
                 =ResetForm(Form3_3);
                 UpdateContext({CeateInitiative:false})
-            Width: =Parent.Width-400
+            Width: =Parent.Width-50
             ZIndex: =2
 
             InitiativeCode_DataCard1_3 As typedDataCard.textualEditCard:
@@ -1349,7 +1379,7 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "InitiativeCode")
                 Required: =true
                 Update: =DataCardValue72_3.Text
-                Width: =966
+                Width: =438
                 X: =0
                 Y: =0
                 ZIndex: =2
@@ -1417,9 +1447,9 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "InitiativeName")
                 Required: =true
                 Update: =DataCardValue73_3.Text
-                Width: =966
-                X: =0
-                Y: =1
+                Width: =438
+                X: =2
+                Y: =0
                 ZIndex: =2
 
                 DataCardKey73_3 As label:
@@ -1485,9 +1515,9 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "Description")
                 Required: =true
                 Update: =DataCardValue74_3.Text
-                Width: =966
-                X: =0
-                Y: =2
+                Width: =438
+                X: =4
+                Y: =0
                 ZIndex: =2
 
                 DataCardKey74_3 As label:
@@ -1554,9 +1584,9 @@
                 Height: =50
                 Required: =true
                 Update: =DataCardValue75_3.Selected
-                Width: =966
+                Width: =438
                 X: =0
-                Y: =3
+                Y: =1
                 ZIndex: =2
 
                 DataCardKey75_3 As label:
@@ -1620,9 +1650,9 @@
                 Height: =50
                 Required: =true
                 Update: =DataCardValue76_3.Selected
-                Width: =966
-                X: =0
-                Y: =4
+                Width: =438
+                X: =2
+                Y: =1
                 ZIndex: =2
 
                 DataCardKey76_3 As label:
@@ -1686,9 +1716,9 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue77_3.SelectedDate
-                Width: =966
-                X: =0
-                Y: =5
+                Width: =438
+                X: =4
+                Y: =1
                 ZIndex: =2
 
                 DataCardKey77_3 As label:
@@ -1751,9 +1781,9 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue78_3.SelectedDate
-                Width: =966
+                Width: =438
                 X: =0
-                Y: =6
+                Y: =2
                 ZIndex: =2
 
                 DataCardKey78_3 As label:
@@ -1777,7 +1807,7 @@
                     StartYear: =1899
                     Tooltip: =Parent.DisplayName
                     Width: =(Parent.Width - 60) * 0.6
-                    X: =392
+                    X: =181
                     Y: =10
                     ZIndex: =2
 
@@ -1817,9 +1847,9 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "TargetAudience")
                 Required: =true
                 Update: =DataCardValue79_3.Text
-                Width: =966
-                X: =0
-                Y: =7
+                Width: =438
+                X: =2
+                Y: =2
                 ZIndex: =2
 
                 DataCardKey79_3 As label:
@@ -1884,9 +1914,9 @@
                 Height: =50
                 Required: =true
                 Update: =Value(DataCardValue80_3.Text)
-                Width: =966
-                X: =0
-                Y: =8
+                Width: =438
+                X: =4
+                Y: =2
                 ZIndex: =2
 
                 DataCardKey80_3 As label:
@@ -1941,13 +1971,52 @@
                     Y: =DataCardKey80_3.Y
                     ZIndex: =4
 
+        Container62 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            ButtonCanvas2 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =UpdateContext({EvidenceinitativePopup:true})
+                Text: ="For Evidance"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas2_1 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="ForGraph"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =2
+
         Button1_34 As button:
             OnSelect: |-
                 =UpdateContext({DisplayInitiative:false})
             Text: ="Cancel"
             X: =546
             Y: =630
-            ZIndex: =3
+            ZIndex: =4
 
     Container53 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(40, 134, 222, 0.15)
@@ -2084,4 +2153,174 @@
             X: =56
             Y: =175
             ZIndex: =6
+
+    "'For Evidence Initiative' As groupContainer.manualLayoutContainer":
+        Fill: =RGBA(40, 134, 222, 0.15)
+        Height: =App.Height-compForAdminAction.ComHeaderHeight
+        Visible: =EvidenceinitativePopup
+        Width: =App.Width-compForAdminAction.VarMenuWidth
+        X: =compForAdminAction.VarMenuWidth
+        Y: =compForAdminAction.ComHeaderHeight
+        ZIndex: =10
+
+        "'Send for Approval_popup_6' As groupContainer.manualLayoutContainer":
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =571
+            Width: =Parent.Width-100
+            X: =55
+            Y: =45
+            ZIndex: =1
+
+            EvidenceformForadminAction As form:
+                DataSource: ='Initiative List'
+                Height: =488
+                Item: =Gallery_study_4.Selected
+                NumberOfColumns: =1
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Attachments_DataCard2 As typedDataCard.attachmentsEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Attachments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Initiative List'],DataSourceInfo.DisplayName,"{Attachments}")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =Parent.Height
+                    Required: =false
+                    Update: =DataCardValue113.Attachments
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey112 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: ="Attach Evidence Here"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =15
+                        ZIndex: =1
+
+                    DataCardValue113 As attachments:
+                        AddAttachmentText: ="Drag & Drop File Or Click Here To Attach Evidence"
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DisplayMode: =Parent.DisplayMode
+                        FontWeight: =FontWeight.Bold
+                        Height: =414
+                        IsInDataCard: =true
+                        Items: =Parent.Default
+                        NoAttachmentsText: =" "
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey112.Y + DataCardKey112.Height + 5
+                        ZIndex: =2
+
+            Button3 As button:
+                OnSelect: =SubmitForm(EvidenceformForadminAction);
+                Text: ="Upload"
+                X: =918
+                Y: =500
+                ZIndex: =2
+
+            Button3_1 As button:
+                OnSelect: |-
+                    =UpdateContext({EvidenceinitativePopup:false})
+                Text: ="Cancel"
+                X: =1106
+                Y: =500
+                ZIndex: =3
+
+    "'For Evidence for Study' As groupContainer.manualLayoutContainer":
+        Fill: =RGBA(40, 134, 222, 0.15)
+        Height: =App.Height-compForAdminAction.ComHeaderHeight
+        Visible: =EvidenceStudyPopup
+        Width: =App.Width-compForAdminAction.VarMenuWidth
+        X: =compForAdminAction.VarMenuWidth
+        Y: =compForAdminAction.ComHeaderHeight
+        ZIndex: =11
+
+        "'Send for Approval_popup_7' As groupContainer.manualLayoutContainer":
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =571
+            Width: =Parent.Width-100
+            X: =55
+            Y: =45
+            ZIndex: =1
+
+            EvidenceformForadminAction_1 As form:
+                DataSource: ='Divisions With Study'
+                Height: =488
+                Item: =Gallery_study_7.Selected
+                NumberOfColumns: =1
+                Width: =Parent.Width
+                ZIndex: =1
+
+                Attachments_DataCard3 As typedDataCard.attachmentsEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="{Attachments}"
+                    Default: =ThisItem.Attachments
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Divisions With Study'],DataSourceInfo.DisplayName,"{Attachments}")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =485
+                    Required: =false
+                    Update: =DataCardValue121.Attachments
+                    Width: =1266
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey120 As label:
+                        AutoHeight: =true
+                        FontWeight: =FontWeight.Bold
+                        Height: =34
+                        Text: ="Attach Evidence Here"
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue121 As attachments:
+                        AddAttachmentText: ="Drag & drop Or Click Here to Attach the Evidence"
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DisplayMode: =Parent.DisplayMode
+                        FontWeight: =FontWeight.Bold
+                        Height: =423
+                        IsInDataCard: =true
+                        Items: =Parent.Default
+                        NoAttachmentsText: =" "
+                        PaddingBottom: =5
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey120.Y + DataCardKey120.Height + 5
+                        ZIndex: =2
+
+            Button3_2 As button:
+                OnSelect: =SubmitForm(EvidenceformForadminAction_1);
+                Text: ="Upload"
+                X: =918
+                Y: =500
+                ZIndex: =2
+
+            Button3_3 As button:
+                OnSelect: |-
+                    =UpdateContext({EvidenceStudyPopup:false})
+                Text: ="Cancel"
+                X: =1106
+                Y: =500
+                ZIndex: =3
 
