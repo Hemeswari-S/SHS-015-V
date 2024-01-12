@@ -15,7 +15,7 @@
 
         Arrow2_13 As arrow.backArrow:
             Height: =30
-            OnSelect: =Navigate(Administration)
+            OnSelect: =
             Width: =30
             ZIndex: =1
 

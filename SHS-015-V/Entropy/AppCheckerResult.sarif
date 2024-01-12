@@ -1835,46 +1835,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Approval(Approver2)'.'ForApprovel1-main_1'.Arrow2_13.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'For Approval(Approver2)'.'ForApprovel1-main_1'.Arrow2_13.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 9,
-                  "snippet": {
-                    "text": "Administration"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "For Approval(Approver2)",
-                "type": "'For Approval(Approver2)'.'ForApprovel1-main_1'.Arrow2_13"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Administration"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'For Approval(Approver2)'.'ForApprovel1-main_1'.Container30_15.Gallery_study_9.Items"
                 }
               ],
