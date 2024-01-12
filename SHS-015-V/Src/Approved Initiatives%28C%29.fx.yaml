@@ -1572,7 +1572,7 @@
 
                 TextInput6 As text:
                     AlignInContainer: =AlignInContainer.Start
-                    Default: ="Text input"
+                    Default: =""
                     Format: =TextFormat.Number
                     OnChange: |-
                         =If(Value(TextInput6.Text)=100&&(TextInput4.Text=""||IsBlank(First(DataCardValue112.Attachments).Name)),UpdateContext({Validation:true}),UpdateContext({Validation:false}));
