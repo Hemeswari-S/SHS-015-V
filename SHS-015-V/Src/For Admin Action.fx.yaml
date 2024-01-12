@@ -998,6 +998,7 @@
 
             Gallery_study_4 As gallery.galleryVertical:
                 DelayItemLoading: =true
+                Height: =Parent.Height
                 Items: =Filter('Initiative List',Progress="Admin Review",DivisionId=Gallery_study_7.Selected.DivisionIdFromList,Study=Gallery_study_7.Selected.'Study Name')
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
@@ -1202,6 +1203,8 @@
                             ZIndex: =3
 
         Container62 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
