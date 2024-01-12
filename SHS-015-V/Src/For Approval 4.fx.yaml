@@ -481,8 +481,9 @@
                             ZIndex: =1
 
     NotFound_3 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.None
         Fill: =RGBA(255, 255, 255, 1)
-        Height: =537
+        Height: =567
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -490,7 +491,7 @@
         Visible: =If(Gallery_study_15.AllItemsCount=0,true,false)
         Width: =App.Width-'compForApproval(A4)'.VarMenuWidth
         X: ='compForApproval(A4)'.VarMenuWidth
-        Y: =231
+        Y: =201
         ZIndex: =7
 
         Image8_20 As image:
@@ -514,7 +515,9 @@
         Height: =App.Height-'compForApproval(A1)'.ComHeaderHeight
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Visible: =ShowActionpage
+        Visible: |-
+            =//ShowActionpage
+            true
         Width: =App.Width-'compForApproval(A4)'.VarMenuWidth
         X: ='compForApproval(A4)'.VarMenuWidth
         Y: ='compForApproval(A1)'.ComHeaderHeight
@@ -564,13 +567,13 @@
                     ZIndex: =1
 
                     Icon27_7 As icon.Reload:
-                        Color: =RGBA(45, 128, 40, 1)
-                        Height: =32
+                        Color: =RGBA(0, 68, 255, 1)
+                        Height: =30
                         Icon: =Icon.Reload
                         OnSelect: =Refresh('Initiative List')
-                        Width: =36
-                        X: =270
-                        Y: =21
+                        Width: =30
+                        X: =310
+                        Y: =24
                         ZIndex: =1
 
                 Container25_87 As groupContainer.manualLayoutContainer:
@@ -790,6 +793,11 @@
                 Checkbox2_14 As checkbox:
                     FillPortions: =1
                     LayoutMinWidth: =50
+                    OnCheck: |
+                        =ForAll(
+                            Filter(Gallery_study_4.AllItems,Checkbox2_14.Value=true),
+                            Collect(ValueofId,ThisRecord.ID)
+                        );
                     Text: =""
                     ZIndex: =1
 
@@ -1009,6 +1017,7 @@
                     Checkbox2_15 As checkbox:
                         Default: =Checkbox2_14.Value
                         LayoutMinWidth: =50
+                        Reset: =Resetcheckbox
                         Text: =""
                         Width: =50
                         ZIndex: =1
@@ -1967,8 +1976,9 @@
                 ZIndex: =3
 
             Button6_9 As button:
-                OnSelect: |
-                    =Clear(ValueofId);
+                OnSelect: |+
+                    =UpdateContext({Resetcheckbox: false});
+                    
                     ForAll(
                         Filter(
                             Gallery_study_16.AllItems,
@@ -1990,6 +2000,10 @@
                         "The initiative is approved successfully",
                         NotificationType.Success
                     );
+                    Clear(ValueofId);
+                    UpdateContext({Resetcheckbox: true});
+                    Reset(Checkbox2_14)
+                    
                 Text: ="Confirm"
                 Width: =142
                 X: =624
@@ -2028,7 +2042,7 @@
             DisplayMode: =If(TextInput3_7.Text="",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =57
             OnSelect: |
-                =Clear(ValueofId);
+                =UpdateContext({Resetcheckbox: false});
                 ForAll(
                     Filter(
                         Gallery_study_16.AllItems,
@@ -2050,6 +2064,11 @@
                     "The study is send for Approval Process successfully",
                     NotificationType.Success
                 );
+                Clear(ValueofId);
+                UpdateContext({Resetcheckbox: true});
+                Reset(Checkbox2_14);
+                
+                UpdateContext({rejectpopup: false});
             Text: ="Confirm"
             Width: =210
             X: =832

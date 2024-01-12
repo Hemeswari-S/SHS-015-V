@@ -566,13 +566,13 @@
                     ZIndex: =1
 
                     Icon27_5 As icon.Reload:
-                        Color: =RGBA(45, 128, 40, 1)
-                        Height: =32
+                        Color: =RGBA(0, 63, 252, 1)
+                        Height: =30
                         Icon: =Icon.Reload
                         OnSelect: =Refresh('Initiative List')
-                        Width: =36
-                        X: =270
-                        Y: =21
+                        Width: =30
+                        X: =310
+                        Y: =27
                         ZIndex: =1
 
                 Container25_75 As groupContainer.manualLayoutContainer:
@@ -2041,7 +2041,7 @@
             DisplayMode: =If(TextInput3_6.Text="",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =57
             OnSelect: |
-                =Clear(ValueofId);
+                =UpdateContext({Resetcheckbox: false});
                 ForAll(
                     Filter(
                         Gallery_study_12.AllItems,
@@ -2063,6 +2063,11 @@
                     "The study is send for Approval Process successfully",
                     NotificationType.Success
                 );
+                Clear(ValueofId);
+                UpdateContext({Resetcheckbox: true});
+                Reset(Checkbox2_10);
+                
+                UpdateContext({rejectpopup: false});
             Text: ="Confirm"
             Width: =210
             X: =832
