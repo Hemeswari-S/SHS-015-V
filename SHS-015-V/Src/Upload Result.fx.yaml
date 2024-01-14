@@ -432,6 +432,15 @@
                 Width: =250
                 ZIndex: =1
 
+            Container65 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =50
+                ZIndex: =2
+
         Container2_6 As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.None
             FillPortions: =0

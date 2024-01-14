@@ -1541,7 +1541,7 @@ Study As screen:
                             NewForm(Form_study);
                             UpdateContext({ShowPopup: false});
                             Notify(
-                                "The Options has been added sucessfully",
+                                "The Study has been added sucessfully",
                                 NotificationType.Success
                             );
                             ResetForm(Form_study);
