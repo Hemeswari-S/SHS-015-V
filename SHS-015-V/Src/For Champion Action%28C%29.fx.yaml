@@ -572,13 +572,13 @@
                     ZIndex: =1
 
                     Icon27 As icon.Reload:
-                        Color: =RGBA(45, 128, 40, 1)
-                        Height: =32
+                        Color: =RGBA(4, 0, 250, 1)
+                        Height: =30
                         Icon: =Icon.Reload
                         OnSelect: =Refresh('Initiative List')
-                        Width: =36
-                        X: =273
-                        Y: =18
+                        Width: =30
+                        X: =310
+                        Y: =24
                         ZIndex: =1
 
                 Container25_53 As groupContainer.manualLayoutContainer:
@@ -693,6 +693,7 @@
 
                 Label28 As label:
                     FontWeight: =FontWeight.Bold
+                    Height: =50
                     PaddingLeft: =20
                     Text: =Gallery_study_2.Selected.'Study Name'
                     Width: =Parent.Width
@@ -725,7 +726,7 @@
 
                         Button1_25 As button:
                             DisabledFill: =Self.Fill
-                            Fill: =RGBA(5, 89, 8, 1)
+                            Fill: =RGBA(40, 134, 222, 1)
                             HoverFill: =Self.Fill
                             OnSelect: |-
                                 =UpdateContext({CeateInitiative:true});NewForm(Form3);
@@ -755,7 +756,7 @@
 
                         Button1_27 As button:
                             DisabledFill: =Self.Fill
-                            Fill: =RGBA(5, 89, 8, 1)
+                            Fill: =RGBA(215, 58, 60, 1)
                             HoverFill: =Self.Fill
                             OnSelect: |+
                                 =UpdateContext({SendforApproval:true});
@@ -769,6 +770,15 @@
                             Text: ="Send For Approval"
                             Width: =Parent.Width
                             ZIndex: =1
+
+            Container66 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =40
+                ZIndex: =3
 
         Header_question_5 As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer

@@ -938,7 +938,7 @@
             ZIndex: =2
 
     Container13 As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =RGBA(0, 0, 0, 0.4)
+        Fill: =RGBA(64, 230, 230, 0.23)
         Height: =645
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -951,6 +951,7 @@
 
         Container17 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Bold
             Fill: =Color.White
             FillPortions: =0
             LayoutAlignItems: =LayoutAlignItems.Center
@@ -966,6 +967,7 @@
                 Align: =Align.Center
                 FontWeight: =FontWeight.Bold
                 Height: =60
+                LineHeight: =1.5
                 Size: =15
                 Text: ="Results Send For Champion Review Successfully"
                 Width: =300
