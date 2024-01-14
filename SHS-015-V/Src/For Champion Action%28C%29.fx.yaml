@@ -2716,7 +2716,7 @@
                 ZIndex: =3
 
     DisplayInitiative As groupContainer.verticalAutoLayoutContainer:
-        Fill: =Color.Beige
+        Fill: =RGBA(144, 240, 229, 1)
         Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
@@ -2919,7 +2919,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Tooltip: =Parent.DisplayName
-                    Width: =543
+                    Width: =(Parent.Width - 60) * 0.6
                     X: =DataCardKey74_2.X + DataCardKey74_2.Width
                     Y: =10
                     ZIndex: =2
