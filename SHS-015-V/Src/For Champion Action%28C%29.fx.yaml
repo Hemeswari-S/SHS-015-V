@@ -2,7 +2,6 @@
 
     "'compForChampionAction(C)' As Component1":
         Height: =768
-        ZIndex: =7
 
     "'Main-For Champion Action(C)' As groupContainer.verticalAutoLayoutContainer":
         Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
@@ -11,7 +10,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =8
+        ZIndex: =2
 
         "'Button&heading_11' As groupContainer.verticalAutoLayoutContainer":
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -500,7 +499,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: =231
-        ZIndex: =9
+        ZIndex: =3
 
         Image8_9 As image:
             Height: =200
@@ -526,7 +525,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =10
+        ZIndex: =4
 
         "'Button&heading_20' As groupContainer.verticalAutoLayoutContainer":
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -1032,7 +1031,7 @@
 
                 Header_question_6 As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.None
-                    Height: =60
+                    Height: =90
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutJustifyContent: =LayoutJustifyContent.Center
                     LayoutMode: =LayoutMode.Auto
@@ -1255,7 +1254,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =11
+        ZIndex: =5
 
         Container68 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.None
@@ -1329,7 +1328,7 @@
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
                         X: =30
-                        Y: =50
+                        Y: =60
                         ZIndex: =2
 
                     ErrorMessage72 As label:
@@ -1538,6 +1537,7 @@
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =2
                         Items: =Choices([@'Initiative List'].Factor)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["Value"]
@@ -1610,6 +1610,7 @@
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =2
                         Items: =Choices([@'Initiative List'].SubFactors)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         SearchFields: =["Value"]
@@ -1973,7 +1974,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =12
+        ZIndex: =6
 
         Form3_1 As form:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -2618,7 +2619,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =13
+        ZIndex: =7
 
         Container52 As groupContainer.manualLayoutContainer:
             AlignInContainer: =AlignInContainer.Center
@@ -2668,7 +2669,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: ='compForChampionAction(C)'.ComHeaderHeight
-        ZIndex: =14
+        ZIndex: =8
 
         Form3_2 As form:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -3303,7 +3304,7 @@
         Width: =1063
         X: =273
         Y: =176
-        ZIndex: =15
+        ZIndex: =9
 
         Label37 As label:
             FontWeight: =FontWeight.Bold
@@ -3369,6 +3370,28 @@
             Y: =181
             ZIndex: =6
 
+    "'Send Approval_popup_main' As groupContainer.verticalAutoLayoutContainer":
+        Fill: =RGBA(63, 232, 221, 0.25)
+        Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
+        X: ='compForChampionAction(C)'.VarMenuWidth
+        Y: ='compForChampionAction(C)'.ComHeaderHeight
+        ZIndex: =11
+
+        Container73 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            Fill: =RGBA(224, 86, 6, 1)
+            Height: =550
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =900
+            ZIndex: =1
+
     "'For Evidence Initiative_1' As groupContainer.manualLayoutContainer":
         Fill: =RGBA(40, 134, 222, 0.15)
         Height: =App.Height-compForAdminAction.ComHeaderHeight
@@ -3376,7 +3399,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =16
+        ZIndex: =12
 
         "'Send for Approval_popup_8' As groupContainer.manualLayoutContainer":
             Fill: =RGBA(255, 255, 255, 1)
@@ -3461,7 +3484,7 @@
         Width: =App.Width-'compForChampionAction(C)'.VarMenuWidth
         X: ='compForChampionAction(C)'.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =17
+        ZIndex: =13
 
         "'Send for Approval_popup_9' As groupContainer.manualLayoutContainer":
             Fill: =RGBA(255, 255, 255, 1)
