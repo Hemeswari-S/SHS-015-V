@@ -2026,6 +2026,8 @@
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
+                    FocusedBorderThickness: =2
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
@@ -2096,6 +2098,8 @@
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
+                    FocusedBorderThickness: =2
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
@@ -2166,6 +2170,8 @@
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
+                    FocusedBorderThickness: =2
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
@@ -2232,9 +2238,15 @@
 
                 DataCardValue75_1 As combobox:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    ChevronBackground: =Color.White
+                    ChevronFill: =Color.Black
+                    ChevronHoverBackground: =Color.Black
+                    ChevronHoverFill: =Color.Black
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
+                    FocusedBorderThickness: =2
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     Items: =Choices([@'Initiative List'].Factor)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -2300,9 +2312,14 @@
 
                 DataCardValue76_1 As combobox:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    ChevronBackground: =Color.White
+                    ChevronFill: =Color.Black
+                    ChevronHoverBackground: =Color.White
+                    ChevronHoverFill: =Color.Black
                     DefaultSelectedItems: =Parent.Default
                     DisplayFields: =["Value"]
                     DisplayMode: =Parent.DisplayMode
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     Items: =Choices([@'Initiative List'].SubFactors)
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                     SearchFields: =["Value"]
@@ -2371,6 +2388,7 @@
                     DefaultDate: =Parent.Default
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
+                    FocusedBorderThickness: =2
                     IsEditable: =true
                     PaddingBottom: =0
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -2437,6 +2455,7 @@
                     DefaultDate: =Parent.Default
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
+                    FocusedBorderThickness: =2
                     IsEditable: =true
                     PaddingBottom: =0
                     PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -2504,6 +2523,8 @@
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
+                    FocusedBorderThickness: =2
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
@@ -2573,7 +2594,9 @@
                     Default: =Parent.Default
                     DelayOutput: =true
                     DisplayMode: =Parent.DisplayMode
+                    FocusedBorderThickness: =2
                     Format: =TextFormat.Number
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     PaddingLeft: =5
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
