@@ -1967,7 +1967,7 @@
                 ZIndex: =2
 
     EditInitiative As groupContainer.verticalAutoLayoutContainer:
-        Fill: =Color.Beige
+        Fill: =RGBA(255, 255, 255, 1)
         Height: =App.Height-'compForChampionAction(C)'.ComHeaderHeight
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
@@ -1986,7 +1986,7 @@
             Item: =Gallery_study_3.Selected
             LayoutMinHeight: =250
             LayoutMinWidth: =400
-            NumberOfColumns: =2
+            NumberOfColumns: =1
             OnFailure: =
             OnSuccess: |
                 =ResetForm(Form3_1);
@@ -2005,7 +2005,7 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "InitiativeCode")
                 Required: =true
                 Update: =DataCardValue72_1.Text
-                Width: =546
+                Width: =1092
                 X: =0
                 Y: =0
                 ZIndex: =2
@@ -2073,9 +2073,9 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "InitiativeName")
                 Required: =true
                 Update: =DataCardValue73_1.Text
-                Width: =546
-                X: =1
-                Y: =0
+                Width: =1092
+                X: =0
+                Y: =1
                 ZIndex: =2
 
                 DataCardKey73_1 As label:
@@ -2141,9 +2141,9 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "Description")
                 Required: =true
                 Update: =DataCardValue74_1.Text
-                Width: =546
+                Width: =1092
                 X: =0
-                Y: =1
+                Y: =2
                 ZIndex: =2
 
                 DataCardKey74_1 As label:
@@ -2208,9 +2208,9 @@
                 Height: =50
                 Required: =true
                 Update: =DataCardValue75_1.Selected
-                Width: =546
-                X: =1
-                Y: =1
+                Width: =1092
+                X: =0
+                Y: =3
                 ZIndex: =2
 
                 DataCardKey75_1 As label:
@@ -2274,9 +2274,9 @@
                 Height: =50
                 Required: =true
                 Update: =DataCardValue76_1.Selected
-                Width: =546
+                Width: =1092
                 X: =0
-                Y: =2
+                Y: =4
                 ZIndex: =2
 
                 DataCardKey76_1 As label:
@@ -2340,9 +2340,9 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue77_1.SelectedDate
-                Width: =546
-                X: =1
-                Y: =2
+                Width: =1092
+                X: =0
+                Y: =5
                 ZIndex: =2
 
                 DataCardKey77_1 As label:
@@ -2405,9 +2405,9 @@
                 Height: =50
                 Required: =false
                 Update: =DataCardValue78_1.SelectedDate
-                Width: =546
+                Width: =1092
                 X: =0
-                Y: =3
+                Y: =6
                 ZIndex: =2
 
                 DataCardKey78_1 As label:
@@ -2471,9 +2471,9 @@
                 MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "TargetAudience")
                 Required: =true
                 Update: =DataCardValue79_1.Text
-                Width: =546
-                X: =1
-                Y: =3
+                Width: =1092
+                X: =0
+                Y: =7
                 ZIndex: =2
 
                 DataCardKey79_1 As label:
@@ -2538,9 +2538,9 @@
                 Height: =50
                 Required: =true
                 Update: =Value(DataCardValue80_1.Text)
-                Width: =546
+                Width: =1092
                 X: =0
-                Y: =4
+                Y: =8
                 ZIndex: =2
 
                 DataCardKey80_1 As label:
@@ -2595,20 +2595,31 @@
                     Y: =DataCardKey80_1.Y
                     ZIndex: =4
 
-        Button1_2 As button:
-            OnSelect: =SubmitForm(Form3_1);
-            Text: ="Save"
-            X: =546
-            Y: =630
-            ZIndex: =2
+        Container79 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Center
+            DropShadow: =DropShadow.None
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =40
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
 
-        Button1_3 As button:
-            OnSelect: |-
-                =UpdateContext({EditInitiative:false})
-            Text: ="Cancel"
-            X: =546
-            Y: =630
-            ZIndex: =3
+            Button1_2 As button:
+                OnSelect: =SubmitForm(Form3_1);
+                Text: ="Save"
+                X: =546
+                Y: =630
+                ZIndex: =1
+
+            Button1_3 As button:
+                OnSelect: |-
+                    =UpdateContext({EditInitiative:false})
+                Text: ="Cancel"
+                X: =546
+                Y: =630
+                ZIndex: =2
 
     DeleteInitiative As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(245, 245, 220, 0.47)
