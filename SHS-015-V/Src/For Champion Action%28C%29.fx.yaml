@@ -2646,6 +2646,8 @@
             ZIndex: =4
 
             Button1_2 As button:
+                Fill: =RGBA(40, 134, 222, 1)
+                HoverFill: =Self.Fill
                 OnSelect: =SubmitForm(Form3_1);
                 Text: ="Save"
                 X: =546
@@ -2653,6 +2655,8 @@
                 ZIndex: =1
 
             Button1_3 As button:
+                Fill: =RGBA(40, 134, 222, 1)
+                HoverFill: =Self.Fill
                 OnSelect: |-
                     =UpdateContext({EditInitiative:false})
                 Text: ="Cancel"
