@@ -2013,6 +2013,7 @@
                 DataCardKey72_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2054,6 +2055,7 @@
 
                 StarVisible72_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey72_1.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -2081,6 +2083,7 @@
                 DataCardKey73_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2122,6 +2125,7 @@
 
                 StarVisible73_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey73_1.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -2149,6 +2153,7 @@
                 DataCardKey74_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2190,6 +2195,7 @@
 
                 StarVisible74_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey74_1.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -2216,6 +2222,7 @@
                 DataCardKey75_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2256,6 +2263,7 @@
 
                 StarVisible75_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey75_1.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -2282,6 +2290,7 @@
                 DataCardKey76_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2322,6 +2331,7 @@
 
                 StarVisible76_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey76_1.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -2348,6 +2358,7 @@
                 DataCardKey77_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2413,6 +2424,7 @@
                 DataCardKey78_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2479,6 +2491,7 @@
                 DataCardKey79_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2520,6 +2533,7 @@
 
                 StarVisible79_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey79_1.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -2546,6 +2560,7 @@
                 DataCardKey80_1 As label:
                     AutoHeight: =true
                     Height: =34
+                    Size: =17
                     Text: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     Wrap: =false
@@ -2587,6 +2602,7 @@
 
                 StarVisible80_1 As label:
                     Align: =Align.Center
+                    Color: =RGBA(255, 0, 0, 1)
                     Height: =DataCardKey80_1.Height
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
