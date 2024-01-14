@@ -16224,19 +16224,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Champion Action(C)'.'Send for Approval_popup'.TextInput3.AccessibleLabel"
+                  "fullyQualifiedName": "'For Champion Action(C)'.'Send Approval_popup_main'.Container73.Container76.TextInput3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Champion Action(C)'.'Send for Approval_popup'.TextInput3.AccessibleLabel",
+                  "fullyQualifiedName": "'For Champion Action(C)'.'Send Approval_popup_main'.Container73.Container76.TextInput3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "For Champion Action(C)",
-                "type": "'For Champion Action(C)'.'Send for Approval_popup'.TextInput3"
+                "type": "'For Champion Action(C)'.'Send Approval_popup_main'.Container73.Container76.TextInput3"
               }
             }
           ],
