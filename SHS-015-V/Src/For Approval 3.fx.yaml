@@ -763,6 +763,16 @@
                             Width: =Parent.Width
                             ZIndex: =1
 
+        Container70_2 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =10
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
         Header_question_19 As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             BorderThickness: =1

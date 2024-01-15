@@ -774,6 +774,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Approver 4'.Menu"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Approver 4'.Menu",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 65,
+                  "snippet": {
+                    "text": "'Dashboard 4'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Menu",
+                "module": "Approver 4",
+                "type": "'Approver 4'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Dashboard 4"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Approver 4'.Menu"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Approver 4'.Menu",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 149,
+                  "snippet": {
+                    "text": "'Inbox 4'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Menu",
+                "module": "Approver 4",
+                "type": "'Approver 4'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Inbox 4"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Approver 4'.Menu"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Approver 4'.Menu",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 184,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Table(\n    {\n        Title: \"Dashboard 4\",\n        TargetScreen: 'Dashboard 4'\n        \n    },\n    {\n        Title: \"Inbox 4\",\n        TargetScreen: 'Inbox 4'     \n        \n    }\n   \n)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Menu",
+                "module": "Approver 4",
+                "type": "'Approver 4'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Table"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleRulePropSchema-SameKind",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'For Approval 3'.'ForApprovel1-main_2'.Container30_17.Gallery_study_11.Items"
                 }
               ],
@@ -25331,7 +25451,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"For Approval 3\" is 328, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"For Approval 3\" is 329, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
