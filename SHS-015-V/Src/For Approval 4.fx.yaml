@@ -764,6 +764,14 @@
                             Width: =Parent.Width
                             ZIndex: =1
 
+            Container71_3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =20
+                ZIndex: =3
+
         Container70_3 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.None
             FillPortions: =0
