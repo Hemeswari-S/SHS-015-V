@@ -689,7 +689,7 @@
                 LayoutMinHeight: =80
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                ZIndex: =1
+                ZIndex: =2
 
                 Label28_3 As label:
                     FontWeight: =FontWeight.Bold
@@ -706,7 +706,7 @@
                 LayoutMinHeight: =80
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                ZIndex: =2
+                ZIndex: =3
 
                 Container25_64 As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.None
@@ -725,7 +725,7 @@
 
                         Button1_38 As button:
                             DisabledFill: =Self.Fill
-                            Fill: =RGBA(5, 89, 8, 1)
+                            Fill: =RGBA(7, 135, 129, 1)
                             HoverFill: =Self.Fill
                             OnSelect: |-
                                 =UpdateContext({Sendforapproval:true})
@@ -768,6 +768,16 @@
                             Text: ="Reject"
                             Width: =Parent.Width
                             ZIndex: =1
+
+        Container70 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =10
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
 
         Header_question_9 As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
