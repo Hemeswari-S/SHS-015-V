@@ -2228,9 +2228,13 @@
             ZIndex: =6
 
     Container85 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(56, 245, 223, 0.18)
         Height: =App.Height-compForAdminAction.ComHeaderHeight
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: |-
+            =//rejectpopup
+            true
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
