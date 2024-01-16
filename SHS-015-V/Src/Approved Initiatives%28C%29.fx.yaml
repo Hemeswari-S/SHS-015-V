@@ -1574,8 +1574,13 @@
                     AlignInContainer: =AlignInContainer.Start
                     Default: =""
                     Format: =TextFormat.Number
-                    OnChange: |-
-                        =If(Value(TextInput6.Text)=100&&(TextInput4.Text=""||IsBlank(First(DataCardValue112.Attachments).Name)),UpdateContext({Validation:true}),UpdateContext({Validation:false}));
+                    OnChange: |
+                        =If(
+                            Value(TextInput6.Text) = 100 && (TextInput4.Text = ""),
+                            UpdateContext({Validation: true}),
+                            If(Value(TextInput6.Text)=100&&IsBlank(First(DataCardValue112.Attachments).Name)
+                            )
+                        );
                     Width: =420
                     ZIndex: =2
 
