@@ -1289,7 +1289,13 @@
                             DisabledFill: =Self.Fill
                             Fill: =RGBA(5, 89, 8, 1)
                             HoverFill: =Self.Fill
-                            OnSelect: =//ClearCollect(ValueofIdS,Gallery_study_4.Selected.ID);ApprovalFlowforAdminAction.Run(JSON(ValueofIdS),"Approval1",Gallery_study_7.Selected.ID)
+                            OnSelect: |-
+                                =ClearCollect(ValueofIdS,Gallery_study_4.Selected.ID);ResponceFlow.Run(
+                                    "approver4",
+                                    "Approved",
+                                    TextInput1_14.Text,
+                                    JSON(ValueofId)
+                                );
                             PressedColor: =Color.White
                             PressedFill: =Self.Fill
                             RadiusBottomLeft: =0
