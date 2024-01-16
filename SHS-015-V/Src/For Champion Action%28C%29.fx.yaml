@@ -819,7 +819,7 @@
                     LayoutMinWidth: =50
                     OnCheck: |-
                         =ForAll(
-                            Filter(Gallery_study_3.AllItems,Checkbox2_3.Value=true),
+                            Filter(Gallery_study_3.AllItems,Checkbox2_1.Value=true),
                             Collect(ValueofId,ThisRecord.ID)
                         );
                     OnSelect: =
@@ -3489,7 +3489,7 @@
                         );
                         UpdateContext({SendforApproval: false});
                         Notify(
-                            "The study is send for admin review successfully",
+                            "The initiative is send for admin review successfully",
                             NotificationType.Success
                         );
                         Clear(ValueofId);
