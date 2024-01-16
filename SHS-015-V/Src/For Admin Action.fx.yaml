@@ -2167,25 +2167,6 @@
         Y: =211
         ZIndex: =8
 
-        Label37_3 As label:
-            FontWeight: =FontWeight.Bold
-            Height: =77
-            Size: =20
-            Text: ="Confirm Submission"
-            Width: =412
-            X: =4
-            Y: =18
-            ZIndex: =1
-
-        Label38_3 As label:
-            Height: =80
-            Size: =20
-            Text: ="Are you sure you want to reject the initiatives of '"&Gallery_study_3.Selected.Study&"'?"
-            Width: =869
-            X: =44
-            Y: =95
-            ZIndex: =2
-
         Button5_7 As button:
             DisplayMode: =If(TextInput3_3.Text="",DisplayMode.Disabled,DisplayMode.Edit)
             Height: =57
@@ -2227,10 +2208,12 @@
             Y: =175
             ZIndex: =6
 
-    Container85 As groupContainer.verticalAutoLayoutContainer:
+    "'Reject-popup' As groupContainer.verticalAutoLayoutContainer":
         Fill: =RGBA(56, 245, 223, 0.18)
         Height: =App.Height-compForAdminAction.ComHeaderHeight
+        LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
         Visible: |-
             =//rejectpopup
@@ -2239,6 +2222,60 @@
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
         ZIndex: =9
+
+        Container88 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Bold
+            Fill: =RGBA(253, 207, 180, 1)
+            FillPortions: =0
+            Height: =550
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =900
+            ZIndex: =1
+
+            Container89 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                Label37_3 As label:
+                    Align: =Align.Center
+                    FontWeight: =FontWeight.Bold
+                    Height: =77
+                    Size: =20
+                    Text: ="Confirm Submission"
+                    Width: =500
+                    X: =4
+                    Y: =18
+                    ZIndex: =1
+
+            Container90 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =100
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                Label38_3 As label:
+                    Height: =80
+                    Size: =20
+                    Text: ="Are you sure you want to reject the initiatives of '"&Gallery_study_3.Selected.Study&"'?"
+                    Width: =869
+                    X: =44
+                    Y: =95
+                    ZIndex: =1
 
     "'For Evidence Initiative' As groupContainer.manualLayoutContainer":
         Fill: =RGBA(40, 134, 222, 0.15)

@@ -23970,19 +23970,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'For Admin Action'.RejectPopup_1.Label38_3.Text"
+                  "fullyQualifiedName": "'For Admin Action'.'Reject-popup'.Container88.Container90.Label38_3.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'For Admin Action'.RejectPopup_1.Label38_3.Text",
+                  "fullyQualifiedName": "'For Admin Action'.'Reject-popup'.Container88.Container90.Label38_3.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Text",
                 "module": "For Admin Action",
-                "type": "'For Admin Action'.RejectPopup_1.Label38_3"
+                "type": "'For Admin Action'.'Reject-popup'.Container88.Container90.Label38_3"
               }
             }
           ],
