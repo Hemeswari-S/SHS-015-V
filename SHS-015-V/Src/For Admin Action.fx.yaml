@@ -2029,7 +2029,7 @@
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =8
+        ZIndex: =7
 
         Container72 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -2165,7 +2165,7 @@
         Width: =1063
         X: =303
         Y: =211
-        ZIndex: =9
+        ZIndex: =8
 
         Label37_3 As label:
             FontWeight: =FontWeight.Bold
@@ -2226,6 +2226,15 @@
             X: =56
             Y: =175
             ZIndex: =6
+
+    Container85 As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height-compForAdminAction.ComHeaderHeight
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width-compForAdminAction.VarMenuWidth
+        X: =compForAdminAction.VarMenuWidth
+        Y: =compForAdminAction.ComHeaderHeight
+        ZIndex: =9
 
     "'For Evidence Initiative' As groupContainer.manualLayoutContainer":
         Fill: =RGBA(40, 134, 222, 0.15)
