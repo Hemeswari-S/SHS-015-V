@@ -2025,6 +2025,7 @@
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
+        Visible: =Sendforapprovaladmin
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
@@ -2035,7 +2036,7 @@
             DropShadow: =DropShadow.Bold
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
-            Height: =550
+            Height: =500
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
             LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -2049,8 +2050,9 @@
             ZIndex: =1
 
             Container80 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
                 FillPortions: =0
-                Height: =100
+                Height: =150
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -2120,6 +2122,7 @@
                     AlignInContainer: =AlignInContainer.Center
                     Fill: =RGBA(255, 0, 0, 1)
                     Height: =57
+                    HoverFill: =Self.Fill
                     OnSelect: |-
                         =UpdateContext({Sendforapprovaladmin:false})
                     Text: ="Cancel"
@@ -2132,6 +2135,7 @@
                     AlignInContainer: =AlignInContainer.Center
                     Fill: =RGBA(54, 176, 75, 1)
                     Height: =57
+                    HoverFill: =Self.Fill
                     OnSelect: |-
                         =UpdateContext({Resetcheckbox: false});
                         ApprovalFlowforAdminAction.Run(
