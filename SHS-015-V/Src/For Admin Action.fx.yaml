@@ -2018,27 +2018,35 @@
             Y: =630
             ZIndex: =4
 
-    "'Send for Approval' As groupContainer.manualLayoutContainer":
-        Fill: =RGBA(40, 134, 222, 0.15)
+    "'Send for Approval' As groupContainer.verticalAutoLayoutContainer":
+        Fill: =RGBA(83, 237, 229, 0.16)
         Height: =App.Height-compForAdminAction.ComHeaderHeight
-        Visible: =Sendforapprovaladmin
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
-        ZIndex: =7
+        ZIndex: =8
 
         Container72 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Bold
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =482
+            FillPortions: =0
+            Height: =550
             LayoutAlignItems: =LayoutAlignItems.Center
             LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             Visible: =Sendforapprovaladmin
-            Width: =1034
+            Width: =900
             X: =177
             Y: =40
-            ZIndex: =2
+            ZIndex: =1
 
             Container80 As groupContainer.horizontalAutoLayoutContainer:
                 FillPortions: =0
@@ -2080,7 +2088,9 @@
                     Height: =118
                     HintText: ="Tell Something(optional)"
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Width: =Parent.Width-50
+                    LayoutMinHeight: =70
+                    Width: |
+                        =725
                     X: =25
                     Y: =133
                     ZIndex: =1
