@@ -462,13 +462,15 @@
                 ZIndex: =1
 
             DataCardValue82_1 As attachments:
-                BorderColor: =RGBA(180, 214, 250, 1)
+                BorderColor: =RGBA(250, 0, 171, 1)
                 BorderThickness: =10
                 DisplayMode: =Parent.DisplayMode
                 DropTargetBorderColor: =RGBA(9, 232, 206, 1)
                 DropTargetBorderStyle: =BorderStyle.Solid
                 DropTargetBorderThickness: =15
                 DropTargetTextColor: =RGBA(54, 176, 75, 1)
+                FocusedBorderThickness: |
+                    =5
                 Height: =Parent.Height
                 IsInDataCard: =true
                 Items: =
@@ -558,9 +560,10 @@
                 ZIndex: =1
 
             DataCardValue82_2 As attachments:
-                BorderColor: =RGBA(180, 214, 250, 1)
+                BorderColor: =RGBA(250, 0, 171, 1)
                 BorderThickness: =10
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =5
                 Height: =Parent.Height
                 IsInDataCard: =true
                 Items: =
@@ -652,9 +655,10 @@
                 ZIndex: =1
 
             DataCardValue82_3 As attachments:
-                BorderColor: =RGBA(180, 214, 250, 1)
+                BorderColor: =RGBA(250, 0, 171, 1)
                 BorderThickness: =10
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =5
                 Height: =Parent.Height
                 IsInDataCard: =true
                 Items: =
@@ -745,9 +749,11 @@
                 ZIndex: =1
 
             DataCardValue82_4 As attachments:
-                BorderColor: =RGBA(180, 214, 250, 1)
+                BorderColor: =RGBA(250, 0, 171, 1)
                 BorderThickness: =10
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: |
+                    =5
                 Height: =Parent.Height
                 IsInDataCard: =true
                 Items: =
@@ -838,9 +844,11 @@
                 ZIndex: =1
 
             DataCardValue82_5 As attachments:
-                BorderColor: =RGBA(180, 214, 250, 1)
+                BorderColor: =RGBA(250, 0, 171, 1)
                 BorderThickness: =10
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: |
+                    =3
                 Height: =Parent.Height
                 IsInDataCard: =true
                 Items: =

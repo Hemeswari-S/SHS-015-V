@@ -1273,8 +1273,8 @@
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DataSource: ='Initiative List'
                 DefaultMode: =FormMode.New
-                FillPortions: =0
-                Height: =540
+                Height: |
+                    =0
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =1
@@ -1284,6 +1284,8 @@
                     UpdateContext({CeateInitiative:false});
                     Refresh('Initiative List')
                 Width: =Parent.Width
+                X: |
+                    =0
                 ZIndex: =1
 
                 InitiativeCode_DataCard1 As typedDataCard.textualEditCard:
@@ -1297,7 +1299,7 @@
                     MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "InitiativeCode")
                     Required: =true
                     Update: =DataCardValue72.Text
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =0
                     ZIndex: =2
@@ -1369,7 +1371,7 @@
                     MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "InitiativeName")
                     Required: =true
                     Update: =DataCardValue73.Text
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =1
                     ZIndex: =2
@@ -1441,7 +1443,7 @@
                     MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "Description")
                     Required: =true
                     Update: =DataCardValue74.Text
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =2
                     ZIndex: =2
@@ -1513,7 +1515,7 @@
                     Height: =50
                     Required: =true
                     Update: =DataCardValue75.Selected
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =3
                     ZIndex: =2
@@ -1586,7 +1588,7 @@
                     Height: =50
                     Required: =true
                     Update: =DataCardValue76.Selected
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =4
                     ZIndex: =2
@@ -1659,7 +1661,7 @@
                     Height: =50
                     Required: =false
                     Update: =DataCardValue77.SelectedDate
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =5
                     ZIndex: =2
@@ -1726,7 +1728,7 @@
                     Height: =50
                     Required: =false
                     Update: =DataCardValue78.SelectedDate
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =6
                     ZIndex: =2
@@ -1794,7 +1796,7 @@
                     MaxLength: =DataSourceInfo([@'Initiative List'], DataSourceInfo.MaxLength, "TargetAudience")
                     Required: =true
                     Update: =DataCardValue79.Text
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =7
                     ZIndex: =2
@@ -1865,7 +1867,7 @@
                     Height: =50
                     Required: =true
                     Update: =Value(DataCardValue80.Text)
-                    Width: =1093
+                    Width: =1100
                     X: =0
                     Y: =8
                     ZIndex: =2

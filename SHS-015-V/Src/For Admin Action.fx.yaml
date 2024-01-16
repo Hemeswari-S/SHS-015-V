@@ -2018,7 +2018,7 @@
             Y: =630
             ZIndex: =4
 
-    Container53 As groupContainer.manualLayoutContainer:
+    "'Send for Approval' As groupContainer.manualLayoutContainer":
         Fill: =RGBA(40, 134, 222, 0.15)
         Height: =App.Height-compForAdminAction.ComHeaderHeight
         Visible: =Sendforapprovaladmin
@@ -2027,63 +2027,122 @@
         Y: =compForAdminAction.ComHeaderHeight
         ZIndex: =7
 
-        "'Send for Approval_popup_1' As groupContainer.manualLayoutContainer":
+        Container72 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Bold
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =389
+            Height: =482
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
             Visible: =Sendforapprovaladmin
-            Width: =672
-            X: =222
-            Y: =99
-            ZIndex: =1
+            Width: =1034
+            X: =177
+            Y: =40
+            ZIndex: =2
 
-            Label33 As label:
-                Align: =Align.Center
-                FontWeight: =FontWeight.Semibold
-                Height: =54
-                Text: ="Are Sure you sure you want"""&Gallery_study_4.Selected.Study &""" to Send For Approval?"
-                Width: =Parent.Width
-                Y: =24
+            Container80 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =100
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
                 ZIndex: =1
 
-            TextInput1 As text:
-                Default: ="Text input"
-                Height: =118
-                Width: =Parent.Width-50
-                X: =20
-                Y: =96
+                Label33 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(6, 148, 136, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =60
+                    Size: =20
+                    Text: ="Are Sure you sure you want """&Gallery_study_4.Selected.Study &""" to Send For Approval?"
+                    Width: =Parent.Width
+                    Y: =24
+                    ZIndex: =1
+
+            Container81 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
                 ZIndex: =2
 
-            Button6 As button:
-                OnSelect: |-
-                    =UpdateContext({Sendforapprovaladmin:false})
-                Text: ="Cancel"
-                Width: =142
-                X: =435
-                Y: =300
+                TextInput1 As text:
+                    AlignInContainer: =AlignInContainer.Center
+                    Default: =""
+                    FillPortions: =1
+                    FocusedBorderThickness: |
+                        =2
+                    Height: =118
+                    HintText: ="Tell Something(optional)"
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    Width: =Parent.Width-50
+                    X: =25
+                    Y: =133
+                    ZIndex: =1
+
+            Container82 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =0
+                Height: =20
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
                 ZIndex: =3
 
-            Button5_16 As button:
-                OnSelect: |-
-                    =UpdateContext({Resetcheckbox: false});
-                    ApprovalFlowforAdminAction.Run(
-                        JSON(ValueofId),
-                        "Approval1",
-                        Gallery_study_7.Selected.ID,
-                        TextInput3_3.Text
-                    );
-                    UpdateContext({Sendforapprovaladmin: false});
-                    Notify(
-                        "The Initiative is send for approval successfully",
-                        NotificationType.Success
-                    );
-                    Clear(ValueofId);
-                    UpdateContext({Resetcheckbox: true});
-                    Reset(Checkbox2_2)
-                Text: ="Confirm"
-                Width: =150
-                X: =626
-                Y: =300
+            Container83 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                DropShadow: =DropShadow.None
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =40
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
                 ZIndex: =4
+
+                Button6 As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    Fill: =RGBA(255, 0, 0, 1)
+                    Height: =57
+                    OnSelect: |-
+                        =UpdateContext({Sendforapprovaladmin:false})
+                    Text: ="Cancel"
+                    Width: =150
+                    X: =570
+                    Y: =381
+                    ZIndex: =1
+
+                Button5_16 As button:
+                    AlignInContainer: =AlignInContainer.Center
+                    Fill: =RGBA(54, 176, 75, 1)
+                    Height: =57
+                    OnSelect: |-
+                        =UpdateContext({Resetcheckbox: false});
+                        ApprovalFlowforAdminAction.Run(
+                            JSON(ValueofId),
+                            "Approval1",
+                            Gallery_study_7.Selected.ID,
+                            TextInput3_3.Text
+                        );
+                        UpdateContext({Sendforapprovaladmin: false});
+                        Notify(
+                            "The Initiative is send for approval successfully",
+                            NotificationType.Success
+                        );
+                        Clear(ValueofId);
+                        UpdateContext({Resetcheckbox: true});
+                        Reset(Checkbox2_2)
+                    Text: ="Confirm"
+                    Width: =150
+                    X: =214
+                    Y: =381
+                    ZIndex: =2
 
     RejectPopup_1 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(152, 208, 70, 1)
