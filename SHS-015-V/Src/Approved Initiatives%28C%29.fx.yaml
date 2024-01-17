@@ -1537,13 +1537,13 @@
                 Width: =Parent.Width-100
                 ZIndex: =3
 
-            Label46_4 As label:
+            Error1 As label:
                 AlignInContainer: =AlignInContainer.Start
                 Color: =RGBA(255, 0, 0, 1)
                 Height: =25
                 Size: =10
                 Text: ="             * Comments Required"
-                Visible: =Validation
+                Visible: =If(Value(TextInput6.Text)=100&&TextInput4.Text="",true,false)
                 Width: =Parent.Width
                 ZIndex: =4
 
@@ -1574,13 +1574,8 @@
                     AlignInContainer: =AlignInContainer.Start
                     Default: =""
                     Format: =TextFormat.Number
-                    OnChange: |
-                        =If(
-                            Value(TextInput6.Text) = 100 && (TextInput4.Text = ""),
-                            UpdateContext({Validation: true}),
-                            If(Value(TextInput6.Text)=100&&IsBlank(First(DataCardValue112.Attachments).Name)
-                            )
-                        );
+                    OnChange: |-
+                        =If(Value(TextInput6.Text)=100&&(TextInput4.Text=""||IsBlank(First(DataCardValue112.Attachments).Name)),UpdateContext({Validation:true}),UpdateContext({Validation:false}));
                     Width: =420
                     ZIndex: =2
 
@@ -1646,13 +1641,13 @@
                         Y: =10
                         ZIndex: =2
 
-            Label46_5 As label:
+            Error2 As label:
                 AlignInContainer: =AlignInContainer.Start
                 Color: =RGBA(255, 0, 0, 1)
                 Height: =25
                 Size: =10
                 Text: ="             * Evidence Required"
-                Visible: =Validation
+                Visible: =If(Value(TextInput6.Text)=100&&IsBlank(First(DataCardValue112.Attachments).Name),true,false)
                 Width: =Parent.Width
                 ZIndex: =10
 
@@ -1680,7 +1675,7 @@
                     ZIndex: =1
 
                 Button1_58 As button:
-                    DisplayMode: =If(Validation=true,DisplayMode.Disabled,DisplayMode.Edit)
+                    DisplayMode: =If(Error1.Visible=true||Error2.Visible,DisplayMode.Disabled,DisplayMode.Edit)
                     Height: =35
                     OnSelect: |-
                         =Patch(
@@ -1694,10 +1689,10 @@
                                 'Initiative Progess': Value(TextInput6.Text)
                             }
                         );
-                        If(
-                            Not(IsBlank(First(DataCardValue112.Attachments).Name)),
+                         
+                        
                             SubmitForm(Form1);
-                        );
+                        
                         UpdateContext({ProgressPopup: false});
                         ResetForm(Form1);
                         Reset(TextInput4);

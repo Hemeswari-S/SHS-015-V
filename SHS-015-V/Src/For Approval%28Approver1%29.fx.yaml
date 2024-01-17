@@ -1219,6 +1219,45 @@
                                 =UpdateContext({DisplayInitiative:true});
                             ZIndex: =3
 
+        Container62_2 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =6
+
+            ButtonCanvas2_4 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =UpdateContext({EvidenceStudyPopup:true})
+                Text: ="For Evidance"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas2_5 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="ForGraph"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =2
+
     DisplayInitiative_2 As groupContainer.verticalAutoLayoutContainer:
         Fill: =RGBA(255, 255, 0, 1)
         Height: =App.Height-'compForApproval(A1)'.ComHeaderHeight
@@ -1955,6 +1994,45 @@
             Y: =630
             ZIndex: =3
 
+        Container62_8 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            ButtonCanvas2_16 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =UpdateContext({EvidenceinitativePopup:true})
+                Text: ="For Evidance"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ButtonCanvas2_17 As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="ForGraph"
+                Width: =150
+                X: =0
+                Y: =0
+                ZIndex: =2
+
     ApprovePopup As groupContainer.manualLayoutContainer:
         Fill: =RGBA(40, 134, 222, 0.15)
         Height: =App.Height-compForAdminAction.ComHeaderHeight
@@ -2120,7 +2198,7 @@
             EvidenceformForadminAction_4 As form:
                 DataSource: ='Initiative List'
                 Height: =488
-                Item: =Gallery_study_4.Selected
+                Item: =Gallery_study_5.Selected
                 NumberOfColumns: =1
                 Width: =Parent.Width
                 ZIndex: =1
@@ -2205,7 +2283,7 @@
             EvidenceformForadminAction_5 As form:
                 DataSource: ='Divisions With Study'
                 Height: =488
-                Item: =Gallery_study_7.Selected
+                Item: =Gallery_study_8.Selected
                 NumberOfColumns: =1
                 Width: =Parent.Width
                 ZIndex: =1
