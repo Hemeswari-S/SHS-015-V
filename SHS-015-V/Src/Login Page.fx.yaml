@@ -38,8 +38,9 @@
         ZIndex: =5
 
     Label1 As label:
+        Color: =RGBA(45, 128, 40, 1)
         Font: =Font.Georgia
-        FontWeight: =FontWeight.Semibold
+        FontWeight: =FontWeight.Bold
         Height: =78
         Size: =20
         Text: ="Welcome to"
