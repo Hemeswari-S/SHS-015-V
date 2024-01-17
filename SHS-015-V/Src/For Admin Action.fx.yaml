@@ -2217,7 +2217,7 @@
         LayoutMode: =LayoutMode.Auto
         Visible: |-
             =//rejectpopup
-            true
+            false
         Width: =App.Width-compForAdminAction.VarMenuWidth
         X: =compForAdminAction.VarMenuWidth
         Y: =compForAdminAction.ComHeaderHeight
