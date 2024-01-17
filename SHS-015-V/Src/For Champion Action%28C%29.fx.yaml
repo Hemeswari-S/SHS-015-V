@@ -819,7 +819,7 @@
                     LayoutMinWidth: =50
                     OnCheck: |-
                         =ForAll(
-                            Filter(Gallery_study_3.AllItems,Checkbox2_1.Value=true),
+                            Filter(Gallery_study_3.AllItems,Checkbox2.Value=true),
                             Collect(ValueofId,ThisRecord.ID)
                         );
                     OnSelect: =
