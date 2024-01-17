@@ -820,7 +820,7 @@
                         =ForAll(
                             Filter(
                                 Gallery_study_10.AllItems,
-                                Checkbox2_9.Value = true
+                                Checkbox2_8.Value = true
                             ),
                             Collect(
                                 ValueofId,
