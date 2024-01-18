@@ -3749,8 +3749,11 @@
                     ZIndex: =2
 
                     DataCardKey120_1 As label:
+                        Color: =RGBA(232, 12, 133, 1)
+                        Font: =Font.Lato
                         FontWeight: =FontWeight.Bold
                         Height: =43
+                        Size: =20
                         Text: ="Attach Evidence Here"
                         Width: =Parent.Width - 60
                         Wrap: =false
