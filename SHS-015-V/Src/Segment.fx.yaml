@@ -539,6 +539,7 @@ Segment As screen:
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            HoverFill: =RGBA(255, 255, 255, 1)
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -607,6 +608,7 @@ Segment As screen:
                             Default: =Parent.Default
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
+                            HoverFill: =RGBA(255, 255, 255, 1)
                             MaxLength: =Parent.MaxLength
                             PaddingLeft: =5
                             RadiusBottomLeft: =0
@@ -668,7 +670,7 @@ Segment As screen:
                     ZIndex: =1
 
                 Button13_4 As button:
-                    Fill: =RGBA(71, 158, 245, 1)
+                    Fill: =RGBA(215, 58, 60, 1)
                     HoverFill: =Self.Fill
                     OnSelect: |-
                         =UpdateContext({ShowPopup_Edit:false})
