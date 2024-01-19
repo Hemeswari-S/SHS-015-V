@@ -460,6 +460,7 @@ Component1 As CanvasComponent:
                     =Set(CureentScreen,ThisItem.TargetScreen);
                     Navigate(ThisItem.TargetScreen,Transition.None);
                 PaddingLeft: =75
+                PressedFill: =Color.Aqua
                 Text: =ThisItem.Title
                 Width: =SubMenu.Width
                 Y: =1
