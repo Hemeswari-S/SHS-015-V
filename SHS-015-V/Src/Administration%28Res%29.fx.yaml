@@ -11,37 +11,3 @@
         Y: =Component1_19.ComHeaderHeight
         ZIndex: =2
 
-        "'Administration(com)_2' As 'Administration(com)'":
-            administration_menu: |-
-                =Table(
-                    {
-                        Title: "Division",
-                        TargetScreen: Division
-                    },
-                    {
-                        Title: "Segment",
-                        TargetScreen: Segment
-                    },
-                    {
-                        Title: "Segment Member",
-                        TargetScreen: 'Segment Member'
-                    },
-                    {
-                        Title: "Factors",
-                        TargetScreen: Factors
-                    },
-                    {
-                        Title: "Subfactors",
-                        TargetScreen: Subfactors
-                    },
-                    {
-                        Title: "Questions",
-                        TargetScreen: Questions
-                    },
-                    {
-                        Title: "Options",
-                        TargetScreen: Options
-                    }
-                )
-            X: =10
-

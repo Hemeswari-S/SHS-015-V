@@ -400,7 +400,9 @@ Component1 As CanvasComponent:
 
         Label42 As label:
             FontWeight: =FontWeight.Semibold
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Set(VarExpandMeu,!VarExpandMeu);
+                Navigate(ThisItem.TargetScreen,Transition.None);
             PaddingLeft: =40
             Text: =ThisItem.Title
             Width: =MainMenu.Width
@@ -434,10 +436,8 @@ Component1 As CanvasComponent:
             Items: =ThisItem.SubMenu
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            OnSelect: |-
-                =
-                Navigate(ThisItem.TargetScreen,Transition.None);
-            TemplateFill: =If(ThisItem.IsSelected,Color.HotPink,RGBA(0, 0, 0, 0))
+            OnSelect: =
+            TemplateFill: =
             TemplateSize: =280
             Visible: =If(ThisItem.Title=MainMenu.Selected.Title,!VarExpandMeu)
             Width: =If(ShowMenu,App.Width/5,0)
@@ -455,7 +455,10 @@ Component1 As CanvasComponent:
 
             Label42_1 As label:
                 FontWeight: =FontWeight.Semibold
-                OnSelect: =Select(Parent)
+                HoverFill: =Color.AntiqueWhite
+                OnSelect: |-
+                    =Set(CureentScreen,ThisItem.TargetScreen);
+                    Navigate(ThisItem.TargetScreen,Transition.None);
                 PaddingLeft: =75
                 Text: =ThisItem.Title
                 Width: =SubMenu.Width
