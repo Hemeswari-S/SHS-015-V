@@ -1434,7 +1434,23 @@
 
             Button1_56 As button:
                 OnSelect: |-
-                    =UpdateContext({ProgressPopup:true})
+                    =UpdateContext({ProgressPopup: true});
+                    If(
+                        Not(
+                            IsBlank(
+                                LookUp(
+                                    'Evidence Of Approved Initiatives',
+                                    Gallery_study_17.Selected.ID = InitiativeId,
+                                    InitiativeId
+                                )
+                            )
+                        ),
+                        Patch(
+                            'Evidence Of Approved Initiatives',
+                            Defaults('Evidence Of Approved Initiatives'),
+                            {InitiativeId: Gallery_study_17.Selected.ID}
+                        )
+                    )
                 Text: ="Update Progress"
                 Width: =230
                 X: =546

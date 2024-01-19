@@ -162,6 +162,9 @@
           "Divisions With Study": {
             "tableName": "179f6bfc-eba9-4ee2-bb68-11014b4c764d"
           },
+          "Evidence Of Approved Initiatives": {
+            "tableName": "c9eeeccf-596e-4fdd-be61-80c68aaeb7cc"
+          },
           "Factor": {
             "tableName": "ccf22452-b069-45bd-b208-f2aa065409b8"
           },
@@ -231,7 +234,8 @@
       "HACT Config",
       "Login Details_1",
       "Divisions With Study",
-      "Initiative List"
+      "Initiative List",
+      "Evidence Of Approved Initiatives"
     ],
     "dependencies": {},
     "dependents": [
